@@ -1,0 +1,22 @@
+.conteiner{
+    background-color: bisque;
+    display: flex;
+    flex: 1;
+    /* flex-direction: column; */
+    gap:30px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.car{
+    background-color: rgba(186, 108, 12, 0.426);
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    justify-content: center;
+}
