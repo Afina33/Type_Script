@@ -1,5 +1,9 @@
 import "./styles.css";
+import Button from "components/Button/Button";
+import Input from "components/Input/Input";
+import Counter from "components/Counter/Counter";
 import { WEATHER_CODES } from "./types";
+import { useState } from "react";
 // !! Есть 2 основных способа вызова перерендера(обновления) компонента:
 // 1 - изменения state(посредством вызова функции setState())
 // 2 - изменение props
@@ -66,7 +70,34 @@ function Lesson_07() {
     tupe: 'Pc',
     valur: 12345642,
   }
+  const sendRequest = () => {
+    // fetch("/url", {
+    //   method: "POST",
+    //   body: `${count}`,
+    // });
+    console.log("Отправка даных на сервер", count);
+    
+  };
 
-  return <div className="lesson_07_page_wrapper"></div>;
+    const [count, setCount] = useState<number>(0);
+  
+    const onPlus = () => {
+      setCount((prevValue: number) => {
+        return prevValue + 1;
+      });
+    };
+  
+    const onMinus = () => {
+      setCount((prevValue: number) => {
+        return prevValue - 1;
+      });
+    };
+
+  return <div className="lesson_07_page_wrapper">
+    <Button name="Send request" onClick={sendRequest}/>
+    <Input label="Userr Name" name="userName"  />
+    <Counter count={count} onMinus={onMinus} onPlus={onPlus}/>
+    
+  </div>;
 }
 export default Lesson_07;
