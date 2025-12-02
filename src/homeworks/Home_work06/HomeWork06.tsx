@@ -1,4 +1,6 @@
-import "./styles.css"
+import { v4 } from "uuid";
+import "./styles.css";
+
 
 export default function HomeWork06() {
   interface Car {
@@ -17,8 +19,8 @@ export default function HomeWork06() {
 
   return (
     <div className="conteiner">
-      {cars.map((car, index) => (
-        <div key={index} className="car">
+      {cars.map((car: Car ) => (
+        <div  key={ v4()} className="car">
           <h2>{car.brand}</h2>
           <p><strong>Price:</strong> ${car.price}</p>
           <p><strong>Fuel type:</strong> {car.isDiesel ? "Дизель" : "Бензин"}</p>

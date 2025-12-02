@@ -1,12 +1,14 @@
-import Lesson_06 from "./Lessons/Lesson_06/Lesson_06"
-import HomeWork06 from "./Home_work/Home_work06/HomeWork06";
+import Lesson_06 from "lessons/Lesson_06/Lesson_06";
+import HomeWork06 from "homeworks/Home_work06/HomeWork06";
+import Lesson_07 from "lessons/Lesson_07/Lesson_07";
 
 
 function App() {
   return (
     <>
       {/* <Lesson_06/> */}
-      <HomeWork06/>
+      {/* <HomeWork06/> */}
+      <Lesson_07/>
     </>
   );
 }
