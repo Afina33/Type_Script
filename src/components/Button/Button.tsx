@@ -1,11 +1,12 @@
-import "./styles.css";
+import { ButtonStyle } from "./styles";
 import {type ButtonProps } from "./types";
 
-function Button({ name = "Send", type = "button", onClick }:ButtonProps) {
+function Button({ name = "Send", type = "button", onClick, isRed = false, isDisabled = false}:ButtonProps) {
+
   return (
-    <button className="button_component" type={type} onClick={onClick}>
+    <ButtonStyle $isDisabled={isDisabled} $isRed={isRed} type={type} onClick={onClick}>
       {name}
-    </button>
+    </ButtonStyle>
   );
 }
 
