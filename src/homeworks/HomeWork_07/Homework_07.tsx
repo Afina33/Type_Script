@@ -9,13 +9,13 @@ export default function Homework_07() {
       const [dislike, setDislike] = useState<number>(0);
     
       const onLike = () => {
-        setLike((prevValue) => {
+        setLike((prevValue: number) => {
           return prevValue + 1;
         });
       };
     
       const onDislike = () => {
-        setDislike((prevValue) => prevValue + 1);
+        setDislike((prevValue: number) => prevValue + 1);
       };
     
       const resetResults = () => {
