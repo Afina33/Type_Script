@@ -1,0 +1,7 @@
+.divWrraper{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(102, 98, 127);
+}
