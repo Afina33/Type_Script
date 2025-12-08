@@ -1,12 +1,37 @@
 import styled from "@emotion/styled";
-interface ButtonComponentStyles {
+
+interface ButtonComponentProps {
   $isRed: boolean;
-  $isDisabled: boolean;
 }
 
+const generateButtonColor = (isRed: boolean, disabled: boolean | undefined) => {
+  if (disabled) {
+    return "#acacacff";
+  } else {
+    if (isRed) {
+      return "#ff6868ff";
+    } else {
+      return "#1f27f5";
+    }
+  }
+};
 
+const generateButtonColorOnHover = (
+  isRed: boolean,
+  disabled: boolean | undefined
+) => {
+  if (disabled) {
+    return "#acacacff";
+  } else {
+    if (isRed) {
+      return "#fc3333ff";
+    } else {
+      return "rgb(97, 102, 255)";
+    }
+  }
+};
 
-export const ButtonStyle = styled.button<ButtonComponentStyles>`
+export const ButtonComponent = styled.button<ButtonComponentProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,21 +40,15 @@ export const ButtonStyle = styled.button<ButtonComponentStyles>`
   padding: 0;
   height: 70px;
   width: 100%;
-   background-color: 
-   ${({ $isDisabled}) =>
-    $isDisabled ? "rgba(146, 143, 143, 1)" : " rgb(82, 82, 241)"};
-   ${({ $isRed }) =>
-    $isRed ? "rgba(232, 13, 13, 1)" : " rgb(82, 82, 241)"};
-  color: white;
+  background-color: ${({ $isRed, disabled }) =>
+    generateButtonColor($isRed, disabled)};
+  color: #ffffff;
   font-size: 20px;
   font-weight: bold;
-  cursor:
-  ${(({$isDisabled})=>$isDisabled ? 'not-allowed' : 'pointer')};
-  :hover{
-    background-color:
-    ${({  $isDisabled}) =>
-       $isDisabled ? "rgba(97, 95, 95, 1))" : "rgb(104, 104, 233)"};
-     ${({ $isRed }) =>
-      $isRed ? "rgba(206, 9, 9, 1)" : "rgb(104, 104, 233)"};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+
+  &:hover {
+    background-color: ${({ $isRed, disabled }) =>
+      generateButtonColorOnHover($isRed, disabled)};
   }
 `;
