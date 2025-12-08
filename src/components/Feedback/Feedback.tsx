@@ -1,24 +1,25 @@
 import Button from "components/Button/Button";
 import type { FeedBackProps } from './types';
+import { ButtonwithcountContainer, FeedbackComponent, FeedbackControl, FeedbackCounter } from "./styles";
 
-import "./styles.css";
+
 
 function Feedback({like, dislike, onLike, onDislike, resetResults}: FeedBackProps) {
   
   return (
-    <div className="feedback-wrapper">
-      <div className="feedback-control">
-        <div className="buttonwithcount-container">
+    <FeedbackComponent>
+      <FeedbackControl>
+        <ButtonwithcountContainer>
           <Button name="Like" onClick={onLike} />
-          <p className="count">{like}</p>
-        </div>
-        <div className="buttonwithcount-container">
+          <FeedbackCounter>{like}</FeedbackCounter>
+        </ButtonwithcountContainer>
+        <ButtonwithcountContainer>
           <Button name="Dislike" onClick={onDislike} />
-          <p className="count">{dislike}</p>
-        </div>
-      </div>
+          <FeedbackCounter>{dislike}</FeedbackCounter>
+        </ButtonwithcountContainer>
+      </FeedbackControl>
       <Button name="Reset Results" onClick={resetResults} />
-    </div>
+    </FeedbackComponent>
   );
 }
 

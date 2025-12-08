@@ -9,7 +9,7 @@ const generateButtonColor = (isRed: boolean, disabled: boolean | undefined) => {
     return "#acacacff";
   } else {
     if (isRed) {
-      return "#ff6868ff";
+      return "#fc3333ff";
     } else {
       return "#1f27f5";
     }
@@ -24,7 +24,7 @@ const generateButtonColorOnHover = (
     return "#acacacff";
   } else {
     if (isRed) {
-      return "#fc3333ff";
+      return "#ff6868ff";
     } else {
       return "rgb(97, 102, 255)";
     }
