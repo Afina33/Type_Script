@@ -1,3 +1,4 @@
+import type { ChangeEvent } from "react";
 
 
 export interface InputProps {
@@ -8,4 +9,6 @@ export interface InputProps {
   label?: string;
   disabled?: boolean;
   error?: string; // текст ошибки
+  value?: string;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }

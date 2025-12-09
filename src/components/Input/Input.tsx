@@ -2,7 +2,7 @@
 import { InputComponent, InputLabel, InputWrapper } from "./styles";
 import {type InputProps } from "./types";
 
-function Input({ id, name, type, placeholder, label, disabled = false, error}: InputProps) {
+function Input({ id, name, type, placeholder, label, disabled = false, error, value, onChange,}: InputProps) {
   return (
     <InputWrapper>
       <InputLabel htmlFor={id}>
@@ -14,7 +14,11 @@ function Input({ id, name, type, placeholder, label, disabled = false, error}: I
         type={type}
         placeholder={placeholder}
         disabled={disabled}
-        error={error}/>
+        error={error}
+        value={value}
+        onChange={onChange}
+        />
+        
     </InputWrapper>
   );
 }
