@@ -1,9 +1,11 @@
 
 
-export interface InputProps{
-    id?: string; 
-    name: string; 
-    type?: string;
-    placeholder?: string; 
-    label: string;
-};
+export interface InputProps {
+  id?: string;
+  name: string;
+  type?: string;
+  placeholder?: string;
+  label?: string;
+  disabled?: boolean;
+  error?: string; // текст ошибки
+}
