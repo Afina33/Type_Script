@@ -4,6 +4,8 @@ import {
   ContainerWrraper,
   ListContainer,
   ListLi,
+  ListUl,
+  NameList,
 } from "./styles";
 import { useState, type ChangeEvent } from "react";
 import Button from "components/Button/Button";
@@ -44,7 +46,10 @@ export default function Homework_09() {
         />
         <Button name="Add" type="submit" onClick={OutputText} />
       </AddFormContainer>
-      <ListContainer>{textList()}</ListContainer>
+      <NameList>Ваши заметки:</NameList>
+      <ListContainer>
+       <ListUl>{textList()}</ListUl> 
+       </ListContainer>
     </ContainerWrraper>
   );
 }
