@@ -19,6 +19,7 @@ export default function Homework_09() {
     setText(event.target.value);
   }
 
+  
   const OutputText = () => {
     setOutputText([...outputText, text]);
     setText("");
