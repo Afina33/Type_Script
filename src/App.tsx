@@ -1,16 +1,18 @@
-import GlobalStyles from "styles/GlobalStyles";
+import Lesson_11 from "./Lessons/Lesson_11/Lesson_11";
+// import GlobalStyles from "styles/GlobalStyles";
 
-import Lesson_06 from "lessons/Lesson_06/Lesson_06";
-import HomeWork06 from "homeworks/Home_work06/HomeWork06";
-import Lesson_07 from "lessons/Lesson_07/Lesson_07";
-import Homework_07 from "homeworks/HomeWork_07/Homework_07";
-import Lesson_08 from "lessons/Lesson_08/Lesson_08";
-import Homework_08 from "homeworks/Home_work_08/Homework_08";
-import Lesson_09 from "lessons/Lesson_09/Lesson_09";
-import Homework_09 from "homeworks/Home_work_09/Homework_09";
-import Lesson_10 from "lessons/Lesson_10/Lesson_10";
-import Playgraund from "./Cs/Cs_06/Playgraund";
-import Homework_10 from "homeworks/Home_work_10/Homework_10";
+// import Lesson_06 from "lessons/Lesson_06/Lesson_06";
+// import HomeWork06 from "homeworks/Home_work06/HomeWork06";
+// import Lesson_07 from "lessons/Lesson_07/Lesson_07";
+// import Homework_07 from "homeworks/HomeWork_07/Homework_07";
+// import Lesson_08 from "lessons/Lesson_08/Lesson_08";
+// import Homework_08 from "homeworks/Home_work_08/Homework_08";
+// import Lesson_09 from "lessons/Lesson_09/Lesson_09";
+// import Homework_09 from "homeworks/Home_work_09/Homework_09";
+// import Lesson_10 from "lessons/Lesson_10/Lesson_10";
+// import Playgraund from "./Cs/Cs_06/Playgraund";
+// import Homework_10 from "homeworks/Home_work_10/Homework_10";
+
 
 
 
@@ -23,14 +25,15 @@ function App() {
       {/* <HomeWork06/> */}
       {/* <Lesson_07/> */}
       {/* <Homework_07/> */}
-      <GlobalStyles/>
+      {/* <GlobalStyles/> */}
       {/* <Lesson_08 /> */}
       {/* <Homework_08/> */}
       {/* <Lesson_09/> */}
       {/* <Homework_09/> */}
       {/* <Lesson_10/> */}
+      <Lesson_11/>
       {/* <Playgraund/> */}
-      <Homework_10/>
+      {/* <Homework_10/> */}
     </>
   );
 }
