@@ -71,3 +71,4 @@ export const UniversityDetail = styled.p`
   margin: 8px 0;
 `;
 
+import styled from "@emotion/styled";
