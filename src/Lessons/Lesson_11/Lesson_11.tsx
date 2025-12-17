@@ -1,23 +1,31 @@
+import { useState } from "react";
+import axios from "axios";
+import type { University } from "./types";
+import Button from "components/Button/Button";
 import Input from "components/Input/Input";
 import {
-  PageWrapper,
   Card,
-  Text,
-  ErrorText,
-  SearchContainer,
   Container,
+  ErrorText,
+  PageWrapper,
+  SearchContainer,
   UniversitiesGrid,
   UniversityCard,
-  UniversityName,
   UniversityDetail,
-  } from "./styles";
-import Button from "components/Button/Button";
+  UniversityName,
+  Text,
+} from "./styles";
 
 export function Lesson_11() {
+  const [country, setCountry] = useState("");
+  const [universities, setUniversities] = useState<University[]>([]);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
   return (
     <PageWrapper>
       <Card>
-        <Text>University Search</Text>
+        <Text>University Search"</Text>
         <SearchContainer>
           <Input
             name={""}
