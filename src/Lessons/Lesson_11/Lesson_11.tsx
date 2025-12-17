@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState, type ChangeEvent } from "react";
 import axios from "axios";
+import { v4 } from "uuid";
 import type { University } from "./types";
 import Button from "components/Button/Button";
 import Input from "components/Input/Input";
@@ -17,34 +18,69 @@ import {
 } from "./styles";
 
 export function Lesson_11() {
-  const [country, setCountry] = useState("");
+  const [country, setCountry] = useState<string>("");
   const [universities, setUniversities] = useState<University[]>([]);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | undefined>(undefined);
   const [loading, setLoading] = useState(false);
+
+  const DATA_COUNTRY_UNIVERSITY: string = `http://universities.hipolabs.com/search?country=${country}`;
+
+  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setCountry(event.target.value);
+  };
+
+  const getCountry = async (event: React.FormEvent) => {
+    event.preventDefault();
+    setUniversities([]);
+    setError(undefined);
+    setLoading(true);
+
+    try {
+      const response = await axios.get<University[]>(DATA_COUNTRY_UNIVERSITY);
+      setUniversities(response.data.slice(0, 15));
+    } catch (error: any) {
+      setUniversities([]);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <PageWrapper>
       <Card>
         <Text>University Search"</Text>
-        <SearchContainer>
+        <SearchContainer onSubmit={getCountry}>
           <Input
-            name={""}
+            name={"searchCountry"}
             label="Country"
             placeholder="Enter Country for searching uneversities"
-            id={""}
+            id={"search"}
+            onChange={onChange}
           />
-          <Button name={"Get Universities"}></Button>
+          <Button
+            type="submit"
+            isDisabled={loading}
+            name={"Get Universities"}
+          />
         </SearchContainer>
         <Container>
-          <ErrorText></ErrorText>
-          <Text></Text>
+          {!!error && <ErrorText>{error}</ErrorText>}
+
           <UniversitiesGrid>
-            <UniversityCard>
-              <UniversityName>имя института</UniversityName>
-              <UniversityDetail>данные</UniversityDetail>
-              <UniversityDetail>данные</UniversityDetail>
-              <UniversityDetail>данные</UniversityDetail>
-            </UniversityCard>
+            {universities.map((university) => (
+              <UniversityCard key={v4()}>
+                <UniversityName>{university.name}</UniversityName>
+
+                <UniversityDetail>
+                  Country: {university.country}
+                </UniversityDetail>
+
+                <UniversityDetail>
+                  <a href={university.web_pages[0]}>Website</a>
+                </UniversityDetail>
+              </UniversityCard>
+            ))}
           </UniversitiesGrid>
         </Container>
       </Card>

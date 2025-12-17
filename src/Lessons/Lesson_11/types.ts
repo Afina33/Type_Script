@@ -1,6 +1,6 @@
 
 export interface University {
-    name: string;
     country: string;
+    name: string;
     web_pages: string[];
 }

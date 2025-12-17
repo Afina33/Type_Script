@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 export const PageWrapper = styled.div`
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   min-height: 100%;
@@ -29,7 +30,7 @@ export const ErrorText = styled(Text)`
   color: #e74c3c;
 `;
 
-export const SearchContainer = styled.div`
+export const SearchContainer = styled.form`
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -70,5 +71,3 @@ export const UniversityDetail = styled.p`
   color: #555;
   margin: 8px 0;
 `;
-
-
