@@ -1,4 +1,4 @@
-import React, { useState, type ChangeEvent } from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
 import axios from "axios";
 import { v4 } from "uuid";
 import type { University } from "./types";
@@ -25,11 +25,11 @@ export function Lesson_11() {
 
   const DATA_COUNTRY_UNIVERSITY: string = `http://universities.hipolabs.com/search?country=${country}`;
 
-  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const onChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setCountry(event.target.value);
   };
 
-  const getCountry = async (event: React.FormEvent) => {
+  const getCountry = async (event: FormEvent): Promise<void> => {
     event.preventDefault();
     setUniversities([]);
     setError(undefined);
@@ -68,7 +68,7 @@ export function Lesson_11() {
           {!!error && <ErrorText>{error}</ErrorText>}
 
           <UniversitiesGrid>
-            {universities.map((university) => (
+            {universities.map((university: University) => (
               <UniversityCard key={v4()}>
                 <UniversityName>{university.name}</UniversityName>
 
@@ -77,7 +77,9 @@ export function Lesson_11() {
                 </UniversityDetail>
 
                 <UniversityDetail>
-                  <a href={university.web_pages[0]}>Website</a>
+                  {university.web_pages.map((link: string) => {
+                    return <a key={v4()} href={link}>Website</a>;
+                  })}
                 </UniversityDetail>
               </UniversityCard>
             ))}
