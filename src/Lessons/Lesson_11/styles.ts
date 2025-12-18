@@ -71,3 +71,8 @@ export const UniversityDetail = styled.p`
   color: #555;
   margin: 8px 0;
 `;
+
+export const UniversityLink = styled.a`
+  color: #3498db;
+ 
+  `;

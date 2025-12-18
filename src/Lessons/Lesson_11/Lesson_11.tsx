@@ -15,6 +15,7 @@ import {
   UniversityDetail,
   UniversityName,
   Text,
+  UniversityLink,
 } from "./styles";
 
 export function Lesson_11() {
@@ -77,7 +78,9 @@ export function Lesson_11() {
                 </UniversityDetail>
 
                 <UniversityDetail>
-                  <a href={university.web_pages[0]}>Website</a>
+                  <UniversityLink href={university.web_pages[0]}>
+                    {" "}
+                  </UniversityLink>
                 </UniversityDetail>
               </UniversityCard>
             ))}
