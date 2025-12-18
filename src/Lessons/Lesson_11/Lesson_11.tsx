@@ -89,4 +89,4 @@ export function Lesson_11() {
       </Card>
     </PageWrapper>
   );
-}
+};
