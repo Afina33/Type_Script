@@ -1,6 +1,5 @@
 import { useEffect, useState, type ChangeEvent } from "react";
 import axios from "axios";
-import "./styles";
 import { PageWrapper, Text, Card, ContainerFacts, ErrorText } from "./styles";
 import Input from "components/Input/Input";
 export default function Lesson_10() {
