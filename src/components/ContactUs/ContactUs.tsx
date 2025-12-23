@@ -25,6 +25,9 @@ export default function ContactUs() {
         validateOnChange: false,
         onSubmit: (values, helpers) => {
             console.log(values, helpers);
+            alert(`Вашь Email: ${values.email} 
+                   Ваше имя: ${values.name} 
+                   Вашь номер телефона: ${values.phone}`);
         }
     });
     
