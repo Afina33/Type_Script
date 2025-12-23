@@ -1,9 +1,10 @@
-import { DivWrapper } from './styles';
+import ContactUs from "components/ContactUs/ContactUs";
+import { DivWrapper } from "./styles";
 
 export default function Homework_12() {
-    return(
-        <DivWrapper>
-
-        </DivWrapper>
-    );
+  return (
+    <DivWrapper>
+      <ContactUs />
+    </DivWrapper>
+  );
 }

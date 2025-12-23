@@ -13,6 +13,7 @@ import Playgraund from "./Cs/Cs_06/Playgraund";
 import Homework_10 from "homeworks/Home_work_10/Homework_10";
 import { Lesson_11 } from "lessons/Lesson_11/Lesson_11";
 import Lesson_12 from "lessons/Lesson_12/Lesson_12";
+import Homework_12 from "homeworks/Home_work_12/Homework_12";
 
 
 
@@ -33,9 +34,10 @@ function App() {
       {/* <Homework_09/> */}
       {/* <Lesson_10/> */}
       {/* <Lesson_11/> */}
-      <Lesson_12/>
+      {/* <Lesson_12/> */}
       {/* <Playgraund/> */}
       {/* <Homework_10/> */}
+      <Homework_12/>
     </>
   );
 }
