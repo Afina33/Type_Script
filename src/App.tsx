@@ -22,23 +22,26 @@ import { Lesson_11 } from "lessons/Lesson_11/Lesson_11";
 import Lesson_12 from "lessons/Lesson_12/Lesson_12";
 import Homework_12 from "homeworks/Home_work_12/Homework_12";
 import Layout from "components/Layout/Layout";
-
-
-
-
-
+import Volkswagen from "pages/Clients/Volkswagen/Volkswagen";
+import Bmw from "pages/Clients/BMW/Bmw";
+import MercedesBenz from "pages/Clients/MercedesBenz/MercedesBenz";
+import Clients from "pages/Clients/Clients";
 
 function App() {
   return (
     <BrowserRouter>
-      <GlobalStyles/>
+      <GlobalStyles />
       <Layout>
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path='/login' element={<LogIn/>}/>
-          <Route path='/contactUs' element={<ContactUs/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/contactUs" element={<ContactUs />} />
           <Route path="*" element="Page not Found" />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/clients/bmw" element={<Bmw />} />
+          <Route path="/clients/volkswagen" element={<Volkswagen />} />
+          <Route path="/clients/mercedesBenz" element={<MercedesBenz />} />
         </Routes>
       </Layout>
       {/* <Lesson_06/> */}
@@ -59,4 +62,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

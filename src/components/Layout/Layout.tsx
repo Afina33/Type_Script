@@ -34,6 +34,9 @@ const goToHomePage = () => {
           <HeaderLink style={getActiveStyles} to="/">
             Home
           </HeaderLink>
+          <HeaderLink style={getActiveStyles} to="/clients">
+            Clients
+          </HeaderLink>
           <HeaderLink style={getActiveStyles} to="/contactUs">
             Contact Us
           </HeaderLink>
@@ -55,6 +58,7 @@ const goToHomePage = () => {
         </FooterLogo>
         <FooterNavigation>
           <FooterLink to="/">Home</FooterLink>
+          <FooterLink to="/clients">Clients</FooterLink>
           <FooterLink to="/contactUs">Contact Us</FooterLink>
           <FooterLink to="/about">About</FooterLink>
           <FooterLink to="/login">Login</FooterLink>
