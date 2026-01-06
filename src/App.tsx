@@ -26,12 +26,13 @@ import Volkswagen from "pages/Clients/Volkswagen/Volkswagen";
 import Bmw from "pages/Clients/BMW/Bmw";
 import MercedesBenz from "pages/Clients/MercedesBenz/MercedesBenz";
 import Clients from "pages/Clients/Clients";
+import Lesson_14 from "lessons/Lesson_14/Lesson_14";
 
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Layout>
+      {/* <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -43,7 +44,7 @@ function App() {
           <Route path="/clients/volkswagen" element={<Volkswagen />} />
           <Route path="/clients/mercedesBenz" element={<MercedesBenz />} />
         </Routes>
-      </Layout>
+      </Layout> */}
       {/* <Lesson_06/> */}
       {/* <HomeWork06/> */}
       {/* <Lesson_07/> */}
@@ -58,6 +59,7 @@ function App() {
       {/* <Playgraund/> */}
       {/* <Homework_10/> */}
       {/* <Homework_12/> */}
+      <Lesson_14/>
     </BrowserRouter>
   );
 }
