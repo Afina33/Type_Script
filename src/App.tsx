@@ -27,6 +27,7 @@ import Bmw from "pages/Clients/BMW/Bmw";
 import MercedesBenz from "pages/Clients/MercedesBenz/MercedesBenz";
 import Clients from "pages/Clients/Clients";
 import Lesson_14 from "lessons/Lesson_14/Lesson_14";
+import Home_work_13 from "homeworks/Home_work_13/Home_work_13";
 
 function App() {
   return (
@@ -59,7 +60,8 @@ function App() {
       {/* <Playgraund/> */}
       {/* <Homework_10/> */}
       {/* <Homework_12/> */}
-      <Lesson_14/>
+      {/* <Lesson_14/> */}
+      <Home_work_13/>
     </BrowserRouter>
   );
 }
