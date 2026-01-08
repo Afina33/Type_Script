@@ -6,7 +6,7 @@ function Section() {
   return (
     <SectionWrapper>
       <SectionTitle>Section Component</SectionTitle>
-      <Content  />
+      <Content />
     </SectionWrapper>
   );
 }
